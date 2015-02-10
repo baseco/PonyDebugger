@@ -125,7 +125,7 @@ void _PDLogObjectsImpl(NSString *severity, NSArray *arguments)
     if (appIconFile) {
         UIImage *appIcon = [UIImage imageNamed:appIconFile];
         if (appIcon) {
-            NSString *base64IconString = [UIImagePNGRepresentation(appIcon) base64Encoding];
+            NSString *base64IconString = [UIImagePNGRepresentation(appIcon) base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
             [parameters setObject:base64IconString forKey:@"app_icon_base64"];
         }
     }

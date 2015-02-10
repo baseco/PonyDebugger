@@ -634,7 +634,7 @@ static NSArray *prettyStringPrinters = nil;
     NSString *encodedBody;
     BOOL isBinary;
     if (!prettyStringPrinter) {
-        encodedBody = responseBody.base64Encoding;
+        encodedBody = [responseBody base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
         isBinary = YES;
     } else {
         encodedBody = [prettyStringPrinter prettyStringForData:responseBody forResponse:response request:request];
