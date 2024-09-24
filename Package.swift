@@ -13,7 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/square/SocketRocket.git", from: "0.5.1")
+        .package(url: "https://github.com/baseco/SocketRocket.git", .branch("master"))
     ],
     targets: [
         .target(
