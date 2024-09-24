@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "PonyDebugger",
     platforms: [
-        .iOS(.v5)
+        .iOS(.v12)
     ],
     products: [
         .library(
