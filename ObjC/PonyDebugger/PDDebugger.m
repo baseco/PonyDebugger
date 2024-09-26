@@ -9,7 +9,11 @@
 //  which Square, Inc. licenses this file to you.
 //
 
+#ifndef SWIFTPM
 #import <SocketRocket/SRWebSocket.h>
+#else
+#import "SRWebSocket.h"
+#endif
 #import <UIKit/UIKit.h>
 
 #import "PDDebugger.h"
