@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SocketRocket",
+        "repositoryURL": "https://github.com/baseco/SocketRocket.git",
+        "state": {
+          "branch": null,
+          "revision": "38b16a44cc69423b733d4ea818522ae849871ab5",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

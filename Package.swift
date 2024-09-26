@@ -13,7 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(path: "SocketRocket")
+        .package(url: "https://github.com/baseco/SocketRocket.git", .revision("38b16a44cc69423b733d4ea818522ae849871ab5")),
     ],
     targets: [
         .target(
