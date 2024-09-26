@@ -9,10 +9,26 @@
 //  which Square, Inc. licenses this file to you.
 //
 
+#ifdef SWIFTPM
+#import "PDObject.h"
+#else
 #import <PonyDebugger/PDObject.h>
+#endif
+#ifdef SWIFTPM
+#import "PDFileSystemDomain.h"
+#else
 #import <PonyDebugger/PDFileSystemDomain.h>
+#endif
+#ifdef SWIFTPM
+#import "PDObject.h"
+#else
 #import <PonyDebugger/PDObject.h>
+#endif
+#ifdef SWIFTPM
+#import "PDFileSystemTypes.h"
+#else
 #import <PonyDebugger/PDFileSystemTypes.h>
+#endif
 
 
 @interface PDFileSystemDomain ()

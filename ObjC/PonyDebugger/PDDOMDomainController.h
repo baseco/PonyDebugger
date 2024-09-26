@@ -9,9 +9,21 @@
 //  which Square, Inc. licenses this file to you.
 //
 
+#ifdef SWIFTPM
+#import "PonyDebugger.h"
+#else
 #import <PonyDebugger/PonyDebugger.h>
+#endif
+#ifdef SWIFTPM
+#import "PDDOMDomain.h"
+#else
 #import <PonyDebugger/PDDOMDomain.h>
+#endif
+#ifdef SWIFTPM
+#import "PDDOMTypes.h"
+#else
 #import <PonyDebugger/PDDOMTypes.h>
+#endif
 #import <UIKit/UIKit.h>
 
 @interface PDDOMDomainController : PDDomainController <PDDOMCommandDelegate>

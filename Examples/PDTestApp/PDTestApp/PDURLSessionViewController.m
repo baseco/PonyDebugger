@@ -6,7 +6,11 @@
 //  Copyright (c) 2014 Square, Inc. All rights reserved.
 //
 
+#ifdef SWIFTPM
+#import "PonyDebugger.h"
+#else
 #import <PonyDebugger/PonyDebugger.h>
+#endif
 
 #import "PDURLSessionViewController.h"
 #import "PDRepo.h"

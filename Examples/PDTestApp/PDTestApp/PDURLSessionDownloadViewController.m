@@ -3,7 +3,11 @@
 // Copyright (c) 2014 Square, Inc. All rights reserved.
 //
 
+#ifdef SWIFTPM
+#import "PDDebugger.h"
+#else
 #import <PonyDebugger/PDDebugger.h>
+#endif
 #import "PDURLSessionDownloadViewController.h"
 
 @interface PDURLSessionDownloadViewController() <NSURLSessionDownloadDelegate>

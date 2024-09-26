@@ -12,7 +12,11 @@
 #import "NSDictionary+PDRuntimePropertyDescriptor.h"
 #import "NSObject+PDRuntimePropertyDescriptor.h"
 
+#ifdef SWIFTPM
+#import "PDRuntimeTypes.h"
+#else
 #import <PonyDebugger/PDRuntimeTypes.h>
+#endif
 
 
 #pragma mark - Private Classes

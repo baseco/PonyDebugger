@@ -13,7 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/baseco/SocketRocket.git", .revision("38b16a44cc69423b733d4ea818522ae849871ab5"))
+        .package(url: "https://github.com/baseco/SocketRocket.git", .revision("00a4c0fcfb37e1e1699ea0aaeba6c9b2b6a94abf"))
     ],
     targets: [
         .target(
@@ -24,7 +24,9 @@ let package = Package(
             publicHeadersPath: "PonyDebugger",
             cSettings: [
                 .headerSearchPath("DerivedSources"),
-                .define("ENABLE_NS_ASSERTIONS", to: "YES")
+                .define("ENABLE_NS_ASSERTIONS", to: "YES"),
+                .define("SWIFTPM", to: "1"),
+                .unsafeFlags(["-fno-objc-arc"])
             ],
             linkerSettings: [
                 .linkedFramework("CoreData"),

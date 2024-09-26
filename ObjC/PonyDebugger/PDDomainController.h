@@ -10,7 +10,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#ifdef SWIFTPM
+#import "PDDynamicDebuggerDomain.h"
+#else
 #import <PonyDebugger/PDDynamicDebuggerDomain.h>
+#endif
 
 @interface PDDomainController : NSObject <PDCommandDelegate>
 

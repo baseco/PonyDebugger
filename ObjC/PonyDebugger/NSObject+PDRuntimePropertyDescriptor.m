@@ -11,9 +11,21 @@
 
 #import "NSObject+PDRuntimePropertyDescriptor.h"
 
+#ifdef SWIFTPM
+#import "PDDefinitions.h"
+#else
 #import <PonyDebugger/PDDefinitions.h>
+#endif
+#ifdef SWIFTPM
+#import "PDRuntimeDomainController.h"
+#else
 #import <PonyDebugger/PDRuntimeDomainController.h>
+#endif
+#ifdef SWIFTPM
+#import "PDRuntimeTypes.h"
+#else
 #import <PonyDebugger/PDRuntimeTypes.h>
+#endif
 
 
 #pragma mark - Definitions

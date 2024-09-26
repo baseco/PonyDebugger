@@ -16,7 +16,11 @@
 #import "PDURLConnectionViewController.h"
 
 #if ENABLE_PONYDEBUGGER
+#ifdef SWIFTPM
+#import "PonyDebugger.h"
+#else
 #import <PonyDebugger/PonyDebugger.h>
+#endif
 #endif
 
 

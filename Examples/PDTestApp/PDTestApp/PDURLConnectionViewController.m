@@ -9,7 +9,11 @@
 //  which Square, Inc. licenses this file to you.
 //
 
+#ifdef SWIFTPM
+#import "PonyDebugger.h"
+#else
 #import <PonyDebugger/PonyDebugger.h>
+#endif
 
 #import "PDURLConnectionViewController.h"
 #import "PDRepo.h"

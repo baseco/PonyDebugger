@@ -463,9 +463,21 @@ func (s *SchemaDomain) WriteTypesHeader(wr io.Writer) {
 //  which Square, Inc. licenses this file to you.
 //
     
+#ifdef SWIFTPM
+#import "PDObject.h"
+#else
 #import <PonyDebugger/PDObject.h>
+#endif
+#ifdef SWIFTPM
+#import "PDDebugger.h"
+#else
 #import <PonyDebugger/PDDebugger.h>
+#endif
+#ifdef SWIFTPM
+#import "PDDynamicDebuggerDomain.h"
+#else
 #import <PonyDebugger/PDDynamicDebuggerDomain.h>
+#endif
 
 {{if .NeededForwardDeclarationsForType}}
 {{range .NeededForwardDeclarationsForType}}@class {{.}};
@@ -556,9 +568,21 @@ func (s *SchemaDomain) WriteDomainHeader(wr io.Writer) {
 //  which Square, Inc. licenses this file to you.
 //
 
+#ifdef SWIFTPM
+#import "PDObject.h"
+#else
 #import <PonyDebugger/PDObject.h>
+#endif
+#ifdef SWIFTPM
+#import "PDDebugger.h"
+#else
 #import <PonyDebugger/PDDebugger.h>
+#endif
+#ifdef SWIFTPM
+#import "PDDynamicDebuggerDomain.h"
+#else
 #import <PonyDebugger/PDDynamicDebuggerDomain.h>
+#endif
 
 {{if .NeededForwardDeclarationsForEvents}}{{range .NeededForwardDeclarationsForEvents}}@class {{.}};
 {{end}}{{end}}
@@ -611,10 +635,26 @@ func (s *SchemaDomain) WriteDomainImplementation(wr io.Writer) {
 //  which Square, Inc. licenses this file to you.
 //
 
+#ifdef SWIFTPM
+#import "PDObject.h"
+#else
 #import <PonyDebugger/PDObject.h>
+#endif
+#ifdef SWIFTPM
+#import "{{.ClassName}}.h"
+#else
 #import <PonyDebugger/{{.ClassName}}.h>
+#endif
+#ifdef SWIFTPM
+#import "PDObject.h"
+#else
 #import <PonyDebugger/PDObject.h>
-{{if .NeededImportsForEvents}}{{range .NeededImportsForEvents}}#import <PonyDebugger/{{.}}.h>
+#endif
+{{if .NeededImportsForEvents}}{{range .NeededImportsForEvents}}#ifdef SWIFTPM
+#import "{{.}}.h"
+#else
+#import <PonyDebugger/{{.}}.h>
+#endif
 {{end}}{{end}}
 
 @interface {{.ClassName}} (){{if .HasCommands}}
